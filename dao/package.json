@@ -49,5 +49,8 @@
     "websocket": "^1.0.28",
     "zos": "~2.1.0",
     "zos-lib": "~2.1.0"
+  },
+  "dependencies": {
+    "toctoc": "^0.3.2"
   }
 }
