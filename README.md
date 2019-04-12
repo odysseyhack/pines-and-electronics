@@ -1,4 +1,6 @@
+> ![banner](https://www.odyssey.org/wp-content/uploads/2018/12/Nature2.0-logo-e1545922454827.png)
 <h1 align="center">Pines & Electronics</h1>
+
 
 > 🕹🚗 Hacking in the Nature2.0 track.
 
