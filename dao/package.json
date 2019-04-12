@@ -1,0 +1,53 @@
+{
+  "name": "@pines-and-electronics/pines-and-electronics",
+  "version": "0.1.0",
+  "description": "Integration of contracts to send commands to a robotic car.",
+  "bugs": {
+    "url": "https://github.com/odysseyhack/pines-and-electronics/issues"
+  },
+  "homepage": "https://github.com/odysseyhack/pines-and-electronics#readme",
+  "main": "truffle.js",
+  "scripts": {
+    "compile": "truffle compile"
+  },
+  "directories": {
+    "doc": "doc",
+    "test": "test"
+  },
+  "files": [
+    "artifacts/**/*",
+    "doc/**/*",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/odysseyhack/pines-and-electronics"
+  },
+  "author": "Pines and electronics",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "chai-subset": "^1.6.0",
+    "dot": "^1.1.2",
+    "eslint": "^5.14.1",
+    "eslint-config-oceanprotocol": "^1.3.0",
+    "eth-gas-reporter": "^0.1.12",
+    "ethereumjs-abi": "^0.6.5",
+    "ethlint": "^1.2.3",
+    "glob": "^7.1.3",
+    "openzeppelin-eth": "^2.1.3",
+    "should": "^13.2.3",
+    "solidity-coverage": "^0.5.11",
+    "solium": "^1.2.3",
+    "solium-plugin-security": "^0.1.1",
+    "truffle": "^5.0.4",
+    "truffle-contract": "^4.0.5",
+    "truffle-hdwallet-provider": "^1.0.4",
+    "web3": "1.0.0-beta.37",
+    "web3-provider-engine": "^14.1.0",
+    "websocket": "^1.0.28",
+    "zos": "~2.1.0",
+    "zos-lib": "~2.1.0"
+  }
+}
