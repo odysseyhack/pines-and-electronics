@@ -1,4 +1,4 @@
-#from flask_app.camera.gcp_vision_multi_img import proccess_picture
+from flask_app.camera.gcp_vision_multi_img import proccess_picture
 from flask import Flask
 import subprocess
 #from squid_py.ddo.metadata import Metadata
@@ -21,17 +21,18 @@ def status():
 def snap():
     #subprocess.call('flask_app/scripts/take_photos.sh')
     #subprocess.call('/home/pi/git/pines-and-electronics/flask_app/scripts/take_photos.sh')
-    #this_cmd = "raspistill -t 10000 -tl 2000 -o /home/pi/git/pines-and-electronics/flask_app/images/image%04d.jpg"
+    this_cmd = "raspistill -t 10000 -tl 2000 -o /home/pi/git/pines-and-electronics/flask_app/images/image%04d.jpg"
     #this_cmd = "raspistill -o cam.jpg"
-    this_cmd = "ls"
-    subprocess.call(this_cmd)
-
+    #this_cmd = "ls"
+    subprocess.call(this_cmd, shell=True)
+    print("Ran", this_cmd)
     return 'snap'
 
 
-@app.route("/api/register", methods=['POST'])
+@app.route("/api/register", methods=['GET'])
 def register():
-    #labels = proccess_picture()
+    labels = proccess_picture()
+    print(labels)
     #metadata =Metadata.get_example()
     #metadata['base']['tags'] = labels
     #ddo = ocean.assets.create(metadata, ocean.accounts._accounts[0])
