@@ -101,3 +101,8 @@ class CarController:
             requests.get(f'{self.config.get("resources", "raspberry.url")}/api/steer')
         else:
             logging.error(f'Invalid command: {command}')
+
+    # def do_request(self):
+    #     try:
+    #         requests.get(f'{self.config.get("resources", "raspberry.url")}/api/snapshot')
+    #     except:
