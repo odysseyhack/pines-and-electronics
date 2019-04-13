@@ -8,10 +8,22 @@
 ---
 ## Table of Contents
 
+  - [📷 Image capture](#image-capture)
   - [🏛 License](#license)
 
 ---
 
+
+## 📷 Image capture
+
+ * Take photos
+ ```
+ bash ./take_photos.sh
+ ``` 
+ * Image classification
+ ```bash
+bash ./image_demo/predict_multiple_img.sh
+```
 
 ## 🏛 License
 

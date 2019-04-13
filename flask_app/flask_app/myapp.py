@@ -1,10 +1,13 @@
+from flask_app.camera.gcp_vision_multi_img import proccess_picture
 from flask import Flask
+import subprocess
 from squid_py.ddo.metadata import Metadata
 from squid_py.ocean import Ocean
+from squid_py.config import Config
 
 app = Flask(__name__)
 
-# ocean = Ocean()
+ocean = Ocean(Config(filename='config.ini'))
 
 
 @app.route("/api/status", methods=['GET'])
@@ -14,12 +17,18 @@ def status():
 
 @app.route("/api/snap", methods=['GET'])
 def snap():
-    return "snap"
+    subprocess.call('flask_app/scripts/take_photos.sh')
+    return 'snap'
 
 
-@app.route("/api/register", methods=['POST'])
+# @app.route("/api/register", methods=['POST'])
+@app.route("/api/register", methods=['GET'])
 def register():
-    return "register"
+    labels = proccess_picture()
+    metadata =Metadata.get_example()
+    metadata['base']['tags'] = labels
+    ddo = ocean.assets.create(metadata, ocean.accounts._accounts[0])
+    return ddo.did
 
 
 @app.route("/api/snapshot", methods=['GET'])
