@@ -1,0 +1,67 @@
+# packages in environment at /home/pi/miniconda3/envs/pines_conda:
+#
+# Name                    Version                   Build  Channel
+absl-py                   0.7.1                     <pip>
+astor                     0.7.1                     <pip>
+bzip2                     1.0.6                hdff2a78_2    rpi
+ca-certificates           2018.8.24                     0    rpi
+cachetools                3.1.0                     <pip>
+certifi                   2018.8.24                py36_1    rpi
+chardet                   3.0.4                     <pip>
+ffmpeg                    3.2.4                h11ee089_0    rpi
+gast                      0.2.2                     <pip>
+giflib                    5.1.4                hdff2a78_1    rpi
+google-api-core           1.9.0                     <pip>
+google-api-python-client  1.7.8                     <pip>
+google-auth               1.6.3                     <pip>
+google-auth-httplib2      0.0.3                     <pip>
+google-cloud-core         0.29.1                    <pip>
+google-cloud-storage      1.14.0                    <pip>
+google-cloud-vision       0.36.0                    <pip>
+google-resumable-media    0.3.2                     <pip>
+googleapis-common-protos  1.5.9                     <pip>
+grpcio                    1.19.0                    <pip>
+h5py                      2.9.0                     <pip>
+hdf5                      1.8.17                        0    rpi
+httplib2                  0.12.1                    <pip>
+idna                      2.8                       <pip>
+jasper                    1.900.1              had6e038_5    rpi
+jpeg                      9c                   hdff2a78_1    rpi
+Keras-Applications        1.0.7                     <pip>
+Keras-Preprocessing       1.0.9                     <pip>
+libgfortran               3.0.0                         0    rpi
+libpng                    1.6.28                        0    rpi
+libtiff                   4.0.6                         0    rpi
+libwebp                   0.5.2                hcb3eeb6_7    rpi
+Markdown                  3.1                       <pip>
+mock                      2.0.0                     <pip>
+ncurses                   6.1                  h4f752ac_1    rpi
+numpy                     1.14.0           py36h73aad69_0    rpi
+openblas                  0.2.19                        0    rpi
+opencv                    3.3.0            py36hb02bd27_0    rpi
+openssl                   1.0.2q               hdff2a78_0    rpi
+pbr                       5.1.3                     <pip>
+pip                       18.0                     py36_1    rpi
+protobuf                  3.7.1                     <pip>
+pyasn1                    0.4.5                     <pip>
+pyasn1-modules            0.2.4                     <pip>
+python                    3.6.6                hd0568c0_1    rpi
+pytz                      2018.9                    <pip>
+readline                  7.0                  hcb560eb_1    rpi
+requests                  2.21.0                    <pip>
+rsa                       4.0                       <pip>
+setuptools                40.2.0                   py36_0    rpi
+six                       1.12.0                    <pip>
+sqlite                    3.24.0               hfcb1bcf_1    rpi
+tensorboard               1.13.1                    <pip>
+tensorflow                1.13.1                    <pip>
+tensorflow-estimator      1.13.0                    <pip>
+termcolor                 1.1.0                     <pip>
+tk                        8.6.8                h849d6a0_0    rpi
+uritemplate               3.0.0                     <pip>
+urllib3                   1.24.1                    <pip>
+Werkzeug                  0.15.2                    <pip>
+wheel                     0.31.1                   py36_1    rpi
+x264                      20131217             h754e1d8_0    rpi
+xz                        5.2.4                hdff2a78_1    rpi
+zlib                      1.2.11            hdff2a78_1003    rpi
