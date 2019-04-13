@@ -4,4 +4,4 @@
 source activate pines_conda
 
 # Connect to google API and predict
-python gcp_vision_multi_img.py
+python ./image_demo/gcp_vision_multi_img.py

@@ -16,7 +16,7 @@ from google.cloud.vision import types
 client = vision.ImageAnnotatorClient()
 
 # Path storing Pi camera photos
-img_path = '/home/pi/Documents/pines_raspberry/image_demo/images'
+img_path = './image_demo/images'
 
 # Classification using Google Vision API
 for img in os.listdir(img_path):

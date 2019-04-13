@@ -3,8 +3,9 @@
  * Take photos
  
  ```
- bash ./take_photos.sh
+ bash ./image_demo/take_photos.sh
  ``` 
+ 
  * Image classification
    
  ``` 
