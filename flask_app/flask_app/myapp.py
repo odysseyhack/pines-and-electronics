@@ -1,5 +1,6 @@
 from flask import Flask
 import subprocess
+from flask import jsonify
 #from squid_py.ddo.metadata import Metadata
 #from squid_py.ocean import Ocean
 #from squid_py.config import Config
@@ -29,6 +30,7 @@ img_path = './images'
 
 # Classification using Google Vision API
 def proccess_picture():
+    all_results = list()
     for img in os.listdir(img_path):
         if img.endswith('.jpg'):
             image = os.path.join(img_path, img)
@@ -47,7 +49,8 @@ def proccess_picture():
                 for label in labels:
                     logging.info(label)
                     result.append(label.description)
-                return result
+        all_results.append(result)
+    return all_results
 
 
 app = Flask(__name__)
@@ -69,18 +72,22 @@ def snap():
     #this_cmd = "ls"
     subprocess.call(this_cmd, shell=True)
     print("Ran", this_cmd)
-    return 'snap'
+    return 'snap!' + this_cmd
 
 
 @app.route("/api/register", methods=['GET'])
 def register():
-    labels = proccess_picture()
-    print(labels)
+    label_list = proccess_picture()
+
+    summary = list()
+    for i, label in enumerate(label_list):
+        print(i, label)
+        summary.append("|".join(label))
     #metadata =Metadata.get_example()
     #metadata['base']['tags'] = labels
     #ddo = ocean.assets.create(metadata, ocean.accounts._accounts[0])
     #return ddo.did
-    return "registered"
+    return " *** ".join(summary)
 
 
 @app.route("/api/snapshot", methods=['GET'])
