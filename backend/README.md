@@ -8,10 +8,15 @@
 ---
 ## Table of Contents
 
+  - [🌳 Get start](#get-start)
   - [🏛 License](#license)
 
 ---
 
+## 🌳 Get start
+
+This component is in charge of listen the events that the frontend send to the blockchain and send a 
+http request to the raspberry-py to make an action.
 
 ## 🏛 License
 

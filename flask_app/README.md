@@ -8,31 +8,10 @@
 ---
 ## Table of Contents
 
-  - [📄 DAO](#dao)
-  - [🔙🔚 Backend](#backend)
-  - [🌿 API](#api)
   - [🏛 License](#license)
 
 ---
 
-## 📄 DAO
-This component has a simple smart contract that emit an event with the command that we want to 
-send to the robotic car.
-First of all we need to compile the contract and generate the abi files:
-```bash
-npx install
-npx truffle compile
-```
-To deploy the contract we need to run the following commands:
-```bash
-npx truffle deploy
-```
-Once this happen we can get the abi files from the build folder to interact with the contracts 
-and the address of the contract.
-
-## 🔙🔚 Backend
-
-## 🌿 API
 
 ## 🏛 License
 
