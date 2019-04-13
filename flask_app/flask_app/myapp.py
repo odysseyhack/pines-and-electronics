@@ -1,4 +1,4 @@
-from flask_app.camera.gcp_vision_multi_img import proccess_picture
+#from flask_app.camera.gcp_vision_multi_img import proccess_picture
 from flask import Flask
 import subprocess
 #from squid_py.ddo.metadata import Metadata
