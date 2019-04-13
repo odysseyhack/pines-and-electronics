@@ -52,7 +52,7 @@ install_requirements = [
     'termcolor == 1.1.0',
     'uritemplate == 3.0.0',
     'urllib3 == 1.24.1',
-    'werkzeug == 0.15.2'
+    'werkzeug == 0.15.2',
     'smbus-cffi == 0.5.1'
 ]
 
