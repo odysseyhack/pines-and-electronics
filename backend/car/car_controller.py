@@ -77,5 +77,13 @@ class CarController:
 
         return _process_event
 
+    def parse_command(self, event):
+        if event is None:
+            logging.error('No event to parse.')
+        if event.args is None:
+            logging.info('There are no commnads in this event')
+        command = event.args._command
+        return command
+
 
 
