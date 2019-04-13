@@ -21,3 +21,6 @@ mythrilReport.md
 securifyReport.txt
 KeeperContracts.png
 slitherReport.txt
+backend/.pytest_cache
+backend/artifacts
+backend/car/__pycache__/
