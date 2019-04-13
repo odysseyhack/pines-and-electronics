@@ -53,6 +53,7 @@ install_requirements = [
     'uritemplate == 3.0.0',
     'urllib3 == 1.24.1',
     'werkzeug == 0.15.2'
+    'smbus-cffi == 0.5.1'
 ]
 
 setup_requirements = ['pytest-runner==2.11.1', ]

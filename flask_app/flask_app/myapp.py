@@ -4,9 +4,11 @@ import subprocess
 from squid_py.ddo.metadata import Metadata
 from squid_py.ocean import Ocean
 from squid_py.config import Config
+from smbus import SMBus
+
 
 app = Flask(__name__)
-
+bus = SMBus(1)
 ocean = Ocean(Config(filename='config.ini'))
 
 
@@ -38,11 +40,13 @@ def snapshot():
 
 @app.route("/api/linear", methods=['POST'])
 def linear():
+    bus.write_byte(8, ord(20))
     return "linear"
 
 
 @app.route("/api/steer", methods=['POST'])
 def steer():
+    bus.write_byte(9, ord(20))
     return "steer"
 
 
