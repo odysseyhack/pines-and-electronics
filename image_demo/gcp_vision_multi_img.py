@@ -36,3 +36,5 @@ for img in os.listdir(img_path):
 			for label in labels:
 				print(label.description)
 	
+				
+	
