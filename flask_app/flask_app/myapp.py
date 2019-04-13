@@ -23,8 +23,7 @@ def snap():
     return 'snap'
 
 
-# @app.route("/api/register", methods=['POST'])
-@app.route("/api/register", methods=['GET'])
+@app.route("/api/register", methods=['POST'])
 def register():
     labels = proccess_picture()
     metadata =Metadata.get_example()
@@ -46,7 +45,7 @@ def linear():
 
 @app.route("/api/steer", methods=['POST'])
 def steer():
-    bus.write_byte(9, ord(20))
+    bus.write_byte(9, ord('x'))
     return "steer"
 
 

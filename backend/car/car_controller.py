@@ -1,11 +1,12 @@
 import json
 import logging
+import requests
 
+from car.event_listener import EventListener
 from squid_py.config import Config
 from squid_py.config_provider import ConfigProvider
 from squid_py.keeper.web3_provider import Web3Provider
-from web3.contract import ConciseContract, Contract
-from car.event_listener import EventListener
+from web3.contract import ConciseContract
 
 
 class CarController:
@@ -74,7 +75,6 @@ class CarController:
     def log_event(event_name):
         def _process_event(event):
             print(f'Received event {event_name}: {event}')
-
         return _process_event
 
     def parse_command(self, event):
@@ -85,5 +85,19 @@ class CarController:
         command = event.args._command
         return command
 
-
-
+    def execute_command(self, command):
+        logging.info(f'Calling command:{command}')
+        if command.startswith('status'):
+            requests.get(f'{self.config.get("resources","raspberry.url")}/api/status')
+        elif command.startswith('snap'):
+            requests.get(f'{self.config.get("resources", "raspberry.url")}/api/snap')
+        elif command.startswith('register'):
+            requests.post(f'{self.config.get("resources", "raspberry.url")}/api/register')
+        elif command.startswith('snapshot'):
+            requests.get(f'{self.config.get("resources", "raspberry.url")}/api/snapshot')
+        elif command.startswith('linear'):
+            requests.get(f'{self.config.get("resources", "raspberry.url")}/api/linear')
+        elif command.startswith('steer'):
+            requests.get(f'{self.config.get("resources", "raspberry.url")}/api/steer')
+        else:
+            logging.error(f'Invalid command: {command}')
